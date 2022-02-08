@@ -13,21 +13,24 @@ export default function App() {
       flexDirection: "row", //horizontal main axis
       justifyContent: "center", //main axis
       alignItems: "center", //secondary axis
+      alignContent: "center",
+      // flexWrap: "wrap", //wraps for each line along the secondary axis
     }}
     >
       <View
         style={{
           backgroundColor: "dodgerblue",
-          width: 100,
-          height: 300,
-          alignSelf: "flex-start"
+          // flexBasis: 100, //width or heigth depending on the main axis
+          flex: -1,
+          width: 400,
+          height: 100,
         }}
       />
       <View
         style={{
           backgroundColor: "gold",
           width: 100,
-          height: 200,
+          height: 100,
         }}
       />
       <View
