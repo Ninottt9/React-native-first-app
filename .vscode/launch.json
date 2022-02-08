@@ -13,9 +13,16 @@
         },
         {
             "name": "Attach to packager",
+            "request": "attach",
+            "type": "reactnative",
+            "cwd": "${workspaceFolder}",
+            "port": 19000
+        } /*,
+        {
+            "name": "Attach to packager",
             "cwd": "${workspaceFolder}",
             "type": "reactnative",
             "request": "attach"
-        }
+        }*/
     ]
 }
