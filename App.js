@@ -1,33 +1,39 @@
 // import { StatusBar } from 'expo-status-bar';
 import {
-  StyleSheet, Text, View, Image, SafeAreaView, Dimensions, Button, Alert, Platform, StatusBar
+  View, StyleSheet, StatusBar
 } from 'react-native';
-
-import { useDeviceOrientation, useDimensions } from '@react-native-community/hooks';
-
-
 
 // View -> UIView
 export default function App() {
 
-  const { landscape } = useDeviceOrientation();
-
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={{
-        backgroundColor: 'dodgerblue',
-        width: '100%',
-        height: landscape ? "100" : "30",
-      }}></View>
-      <Text>HELLO SEREGA, how are you?</Text>
-      {/* <Button
-        title="Mom, press"
-        onPress={() => Alert.alert("Wow, you clicked??", "You happy?", [
-          { text: "Yes" },
-          { text: "Yes" },
-        ])}
-      /> */}
-    </SafeAreaView >
+    <View style={{
+      backgroundColor: "#fff",
+      flex: 1,
+      flexDirection: "row",
+    }}>
+      <View
+        style={{
+          backgroundColor: "dodgerblue",
+          width: 100,
+          height: 100,
+        }}
+      />
+      <View
+        style={{
+          backgroundColor: "gold",
+          width: 100,
+          height: 100,
+        }}
+      />
+      <View
+        style={{
+          backgroundColor: "tomato",
+          width: 100,
+          height: 100,
+        }}
+      />
+    </View>
   );
 }
 
