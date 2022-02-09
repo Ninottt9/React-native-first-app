@@ -1,57 +1,26 @@
 // import { StatusBar } from 'expo-status-bar';
+import React from 'react';
 import {
-  View, StyleSheet, StatusBar
+  View, Image, ImageBackground, StyleSheet, StatusBar
 } from 'react-native';
 
 // View -> UIView
 export default function App() {
 
   return (
-    <View style={{
-      backgroundColor: "#fff",
-      flex: 1,
-      flexDirection: "row", //horizontal main axis
-      justifyContent: "center", //main axis
-      alignItems: "center", //secondary axis
-      // alignContent: "center",
-      // flexWrap: "wrap", //wraps for each line along the secondary axis
-    }}
-    >
-      <View
-        style={{
-          backgroundColor: "dodgerblue",
-          width: 100,
-          height: 100,
-        }}
-      />
-      <View
-        style={{
-          backgroundColor: "gold",
-          width: 100,
-          height: 100,
-          top: 20,
-          left: 20, // positioning
-          position: "absolute", //position depenfing on other elements or screen
-        }}
-      />
-      <View
-        style={{
-          backgroundColor: "tomato",
-          width: 100,
-          height: 100,
-        }}
-      />
-    </View>
+    <ImageBackground source={require('./assets/background.jpg')} style={{ width: '100%', height: '100%', flex: 1 }}>
+      <Image source={require('./assets/logo-red.png')} style={{ width: 100, height: 100, alignContent: 'center' }} />
+    </ImageBackground>
   );
 }
 
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "white",
-    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
-    // alignItems: 'center',
-    // justifyContent: 'center',
-  },
-});
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: "white",
+//     paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
+//     // alignItems: 'center',
+//     // justifyContent: 'center',
+//   },
+// });
