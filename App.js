@@ -1,16 +1,13 @@
 // import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import {
-  View, Image, ImageBackground, StyleSheet, StatusBar
-} from 'react-native';
 
-// View -> UIView
+import WelcomeScreen from './App/screens/WelcomeScreen.js';
+import ViewImageScreen from './App/screens/ViewImageScreen.js';
+
 export default function App() {
-
   return (
-    <ImageBackground source={require('./assets/background.jpg')} style={{ width: '100%', height: '100%', flex: 1 }}>
-      <Image source={require('./assets/logo-red.png')} style={{ width: 100, height: 100, alignContent: 'center' }} />
-    </ImageBackground>
+    <ViewImageScreen />
+    // <ViewImageScreen />
   );
 }
 
